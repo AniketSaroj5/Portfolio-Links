@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aniket Saroj — Links</title>
+  <meta name="description" content="Responsive portfolio links page with social icons, resume, and profile photo" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --muted:#9ca3af;
+      --accent1:#06b6d4;
+      --accent2:#7c3aed;
+      --max-width:920px;
+      --gap:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, sans-serif;
+      background: linear-gradient(180deg, #071126 0%, #071526 60%);
+      color:#e6eef8;
+      display:flex;align-items:center;justify-content:center;
+      min-height:100vh;padding:40px 20px;
+    }
+    .wrapper{
+      width:100%;max-width:var(--max-width);
+      background: rgba(255,255,255,0.02);
+      border-radius:20px;padding:28px;
+      box-shadow:0 10px 30px rgba(3,7,18,0.6);
+      border:1px solid rgba(255,255,255,0.05);
+    }
+    .header{display:flex;align-items:center;gap:18px;margin-bottom:20px}
+    .avatar img{
+      width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid var(--accent1);
+    }
+    .meta h1{font-size:20px;font-weight:700}
+    .role{color:var(--muted);font-size:14px;margin-top:6px}
+    .bio{color:var(--muted);font-size:13px;margin-top:8px}
+
+    .links{display:grid;grid-template-columns:1fr;gap:var(--gap);margin-top:22px}
+    .link-card{
+      background:rgba(255,255,255,0.03);
+      border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;
+      transition:transform .2s ease,box-shadow .2s ease;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .link-card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.4)}
+    .link-icon img{width:36px;height:36px;border-radius:8px}
+    .link-content{flex:1}
+    .link-title{font-weight:600;font-size:15px}
+    .link-desc{font-size:13px;color:var(--muted);margin-top:4px}
+    .btn{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      border:none;padding:8px 14px;border-radius:10px;color:#071126;font-weight:700;cursor:pointer;font-size:13px;
+    }
+    @media(min-width:720px){.links{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="header">
+      <div class="avatar">
+        <img src="profile.png" alt="Aniket Saroj Profile Photo">
+      </div>
+      <div class="meta">
+        <h1>Aniket Saroj — Frontend Developer</h1>
+        <div class="role">HTML • CSS • JavaScript • React</div>
+        <p class="bio">Explore my profiles, resume, and social links below.</p>
+      </div>
+    </header>
+
+    <section class="links">
+      <article class="link-card">
+        <div class="link-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></div>
+        <div class="link-content">
+          <div class="link-title">LinkedIn</div>
+          <div class="link-desc">Connect with me professionally</div>
+        </div>
+        <a class="btn" href="https://www.linkedin.com/in/aniket-saroj-a35922245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">Visit</a>
+      </article>
+
+      <article class="link-card">
+        <div class="link-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></div>
+        <div class="link-content">
+          <div class="link-title">GitHub</div>
+          <div class="link-desc">See my open-source projects</div>
+        </div>
+        <a class="btn" href="https://github.com/AniketSaroj5?tab=repositories" target="_blank">View</a>
+      </article>
+
+      <article class="link-card">
+        <div class="link-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></div>
+        <div class="link-content">
+          <div class="link-title">Instagram</div>
+          <div class="link-desc">Follow my design journey</div>
+        </div>
+        <a class="btn" href="https://www.instagram.com/aniket.saroj01?igsh=MWFybDYxd2U2MG53Yw== " target="_blank">Follow</a>
+      </article>
+
+      <article class="link-card">
+        <div class="link-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlechrome.svg" alt="Resume"></div>
+        <div class="link-content">
+          <div class="link-title">Resume (PDF)</div>
+          <div class="link-desc">Download my resume</div>
+        </div>
+        <a class="btn" href="resume.pdf" download>Download</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
